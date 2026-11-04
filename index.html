@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Universe</title>
+    <!-- Memuat Three.js r128 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Memuat Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Memuat CSS Eksternal -->
+    <link rel="stylesheet" href="love.css">
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <canvas id="stars-canvas"></canvas>
+    <div class="nebula"></div>
+
+    <!-- Audio Element -->
+    <audio id="bgm" loop>
+        <source src="jelita.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Intro Section -->
+    <section id="intro-section">
+        <h1>YOU ARE MY UNIVERSE</h1>
+        <p>Di antara miliaran bintang, aku menemukan satu semesta yang paling indah: kamu.</p>
+        <button class="glow-btn" id="enter-btn">ENTER OUR UNIVERSE ✨</button>
+    </section>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        
+        <!-- Music Toggle -->
+        <button id="music-btn" class="music-pulse">
+            <span id="music-icon">🔊</span> <span id="music-text">MUSIC ON</span>
+        </button>
+
+        <!-- Galaxy / Orbit Section -->
+        <section class="galaxy-container" id="galaxy-container">
+            <canvas id="webgl-canvas"></canvas>
+            
+            <!-- Center Text Overlay -->
+            <div class="planet-text-overlay">
+                <h2 class="cinzel"></h2>
+                <p><br></p>
+            </div>
+        </section>
+
+        <!-- Romantic Message Section -->
+        <section class="romantic-section">
+            <div class="reveal-text">
+                <h3 class="cinzel">For You</h3>
+                <p>"Semangat yaa,<br>aku tau harimu berat, semoga lelahmu dibayar dengan realita yang kamu inginkan."<br>"keep strong my girl"</p>
+            </div>
+        </section>
+
+        <!-- Ending Section -->
+        <section class="romantic-section ending">
+            <div class="reveal-text">
+                <h2 class="cinzel">MY FAVORITE UNIVERSE IS YOU ❤️</h2>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeModal(event)">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal(event)">×</button>
+            <img src="" alt="Enlarged Photo" id="lightbox-img" class="lightbox-img">
+        </div>
+    </div>
+
+    <!-- Memuat JavaScript Eksternal -->
+    <script src="love.js"></script>
+</body>
+</html>
